@@ -1,0 +1,14 @@
+services:
+    mongo:
+        image: mongo
+        restart: unless-stopped
+        network_mode: host
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: root
+
+    redis:
+        network_mode: host
+        restart: unless-stopped
+        image: redis
+        command: redis-server --requirepass root
