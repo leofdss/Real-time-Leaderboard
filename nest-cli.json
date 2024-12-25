@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/real-time-leaderboard/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/real-time-leaderboard/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/real-time-leaderboard",
+  "projects": {
+    "real-time-leaderboard": {
+      "type": "application",
+      "root": "apps/real-time-leaderboard",
+      "entryFile": "main",
+      "sourceRoot": "apps/real-time-leaderboard/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/real-time-leaderboard/tsconfig.app.json"
+      }
+    }
+  }
+}
